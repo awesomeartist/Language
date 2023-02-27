@@ -1,2 +1,2 @@
-# Python
-This repository is to learn python
+## Python
+学习和使用 Python 的一些记录
