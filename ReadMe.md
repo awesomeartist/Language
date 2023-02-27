@@ -1,1 +1,1 @@
-This is a repository to learn CPP.
+### 学习 C++ 过程的一些记录
