@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 
-int main(void)
-{
+int main(void){
+    
     char *str1;
     char str2[10];
 

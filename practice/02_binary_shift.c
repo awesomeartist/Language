@@ -5,8 +5,8 @@
 void printf_bin(int num);
 void printf2bin(int num);
 
-int main(void)
-{  
+int main(void){  
+    
     /*
     代码段功能：验证变量移位操作
     无符号数:左移和右移都是用的逻辑移位，即左移低位空出的补0，右移高位空出的补0；

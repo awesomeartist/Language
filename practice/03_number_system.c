@@ -1,7 +1,7 @@
 #include "stdio.h"
 
-int main(void)
-{
+int main(void){
+    
     int binary  = 0b1010;
     int decimal = 10;
     int octal    = 012;
