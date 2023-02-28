@@ -12,4 +12,4 @@ while 1:
     elif 60>score>=0:
         print('E')
     else:
-        print('input false!')
+        print('input invalid!')
