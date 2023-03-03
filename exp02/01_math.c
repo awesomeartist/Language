@@ -9,6 +9,7 @@ int main(int argc, char* argv[]) {
     float x1, x2;
     float re, im;
     float delta;
+    
     printf("please input three numbers in order for equation \"ax^2+bx+c=0\"\n:");
     printf("a = ");
     scanf("%f", &a);

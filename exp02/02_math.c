@@ -7,6 +7,7 @@ int main(void){
     int x;
     printf("please input a value for x:");
     scanf("%d",&x);
+    
     if (x<0) {
         printf("f(x) = %d", 4*x-3);
     }

@@ -1,6 +1,15 @@
-#include "stdafx.h"
+/* 
+ * filename:matrix.c
+ * coding:GBK 
+ * author:yan
+ * function:�ն��������������ʵ�ַ����������
+ */
+
+// #include "stdafx.h"
+#include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <tchar.h>
 
 float a[11][9][9]={0};
 char an[11][10]={0};
@@ -94,7 +103,7 @@ void p1(char b[],int p,int x,int y,int h)
 		}putchar('\n');
 	}goto right;
 error:;
-	printf("数值输入有误\n");an[n][0]=0;
+	printf("��ֵ��������\n");an[n][0]=0;
 right:;
 }
 
@@ -174,9 +183,9 @@ void p2(char b[],int p,int n){
 		   printf("det=%.2f\n",det);goto endline;
 	}}
 	switch(mode){
-	case 0:an[n][0]=0;printf("无法识别的格式\n");break;
+	case 0:an[n][0]=0;printf("�޷�ʶ��ĸ�ʽ\n");break;
 	case 2:for(x=-1;++x<xy[n]/10;){for(y=-1;++y<xy[n]%10;) printf("%-5.2f  ",a[n][x][y]);putchar('\n');}break;
-	case 4:printf("矩阵类型不匹配\n");break;
+	case 4:printf("�������Ͳ�ƥ��\n");break;
 	}
 	endline:;
 }
@@ -211,7 +220,7 @@ void anl1(char b[],int p)
 	if(!mode) an[n][0]=0;
 	else xy[n]=10*x+y;
 	switch(mode){
-	case 0:printf("无法识别的格式\n");break;
+	case 0:printf("�޷�ʶ��ĸ�ʽ\n");break;
 	case 1:p1(b,p,x,y,n);break;
 	case 2:p2(b,p,n);break;
 	}
@@ -229,25 +238,25 @@ void anl(char b[])
 		if(b[i]==' '){mode=0;break;}
 	}if(mode==3)mode=2;
 	switch(mode){
-	case 0:printf("无法识别的格式\n");break;
+	case 0:printf("�޷�ʶ��ĸ�ʽ\n");break;
 	case 1:anl1(b,p);break;
 	case 2:p2(b,-1,10);break;
 	}
 }
 
 void pt(){
-	printf("以下为目录\n");
+	printf("����ΪĿ¼\n");
 	printf("**********************\n");
-	printf("a(x,y)=n1,n2,n3,n4,n5  >>>>>  输入赋值\n");
-	printf("b=a  >>>>>  计算赋值\n");
-	printf("a!   >>>>>  求逆\n");
-	printf("a&   >>>>>  求值\n");
-	printf("a?   >>>>>  转置\n");
-	printf("a*3  >>>>>  数乘\n");
-	printf("a*b  >>>>>  矩阵乘法\n");
-	printf("a    >>>>>  显示\n");
-	printf("exit >>>>>  退出\n");
-	printf("请开始你的表演\n");
+	printf("a(x,y)=n1,n2,n3,n4,n5  >>>>>  ���븳ֵ\n");
+	printf("b=a  >>>>>  ���㸳ֵ\n");
+	printf("a!   >>>>>  ����\n");
+	printf("a&   >>>>>  ��ֵ\n");
+	printf("a?   >>>>>  ת��\n");
+	printf("a*3  >>>>>  ����\n");
+	printf("a*b  >>>>>  ����˷�\n");
+	printf("a    >>>>>  ��ʾ\n");
+	printf("exit >>>>>  �˳�\n");
+	printf("�뿪ʼ��ı���\n");
 	printf("**********************\n");
 }
 

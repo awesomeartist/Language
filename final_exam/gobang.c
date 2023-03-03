@@ -1,7 +1,15 @@
+/* 
+ * filename:gobang.c
+ * coding:GBK 
+ * author:yan
+ * function:ÖÕ¶ËÃüÁîĞĞÊäÈëÊä³öÊµÏÖÎå×ÓÆå
+ */
 
-#include "stdafx.h"
+// #include "stdafx.h"
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <tchar.h>
 
 #define N 9
 
@@ -27,11 +35,11 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	srand((unsigned)time(NULL));
 	if (rand() % 2) {
-		printf("è¯·é»‘æ–¹ä¸‹å­(è¡Œ åˆ—)\n");
+		printf("ÇëºÚ·½ÏÂ×Ó(ĞĞ ÁĞ)\n");
 		i = 0;
 	}
 	else {
-		printf("è¯·ç™½æ–¹ä¸‹å­(è¡Œ åˆ—)\n");
+		printf("Çë°×·½ÏÂ×Ó(ĞĞ ÁĞ)\n");
 		i = 1;
 	}
 
@@ -40,22 +48,23 @@ int _tmain(int argc, _TCHAR* argv[])
 			white(board);
 			printboard(board);
 			check(board);
-			printf("è¯·ç™½æ–¹ä¸‹å­(è¡Œ åˆ—)\n");
+			printf("Çë°×·½ÏÂ×Ó(ĞĞ ÁĞ)\n");
 		}
 		else {
 			black(board);
 			printboard(board);
 			check(board);
-			printf("è¯·é»‘æ–¹ä¸‹å­(è¡Œ åˆ—)\n");
+			printf("ÇëºÚ·½ÏÂ×Ó(ĞĞ ÁĞ)\n");
 		}
 	}
 }
 
 void black(char a[N][N]) {
 	int x, y;
-	scanf_s("%d%d", &x, &y);
+	// scanf_s("%d%d", &x, &y);
+    scanf("%d%d", &x, &y);
 	if (x>N || x<1 || y>N || y<1 || a[x - 1][y - 1] != '\'') {
-		printf("ä½ç½®æ— æ•ˆ\n");
+		printf("Î»ÖÃÎŞĞ§\n");
 		black(a);
 	}
 	else
@@ -64,9 +73,10 @@ void black(char a[N][N]) {
 
 void white(char a[N][N]) {
 	int x, y;
-	scanf_s("%d%d", &x, &y);
+    // scanf_s("%d%d", &x, &y);
+	scanf("%d%d", &x, &y);
 	if (x>N || x<1 || y>N || y<1 || a[x - 1][y - 1] != '\'') {
-		printf("ä½ç½®æ— æ•ˆ\n");
+		printf("Î»ÖÃÎŞĞ§\n");
 		white(a);
 	}
 	else
@@ -77,11 +87,11 @@ void check(char a[N][N]) {
 	for (int i = 0; i<N; i++) {
 		for (int j = 0; j<N; j++) {
 			if (a[i][j] == '*' && (countdown(a, '*', i, j) == 5 || countright(a, '*', i, j) == 5 || countlowerright(a, '*', i, j) == 5)) {
-				printf("ç™½æ–¹èµ¢ï¼\n");
+				printf("°×·½Ó®£¡\n");
 				exit(0);
 			}
 			if (a[i][j] == '#' && (countdown(a, '#', i, j) == 5 || countright(a, '#', i, j) == 5 || countlowerright(a, '#', i, j) == 5)) {
-				printf("é»‘æ–¹èµ¢ï¼\n");
+				printf("ºÚ·½Ó®£¡\n");
 				exit(0);
 			}
 		}
