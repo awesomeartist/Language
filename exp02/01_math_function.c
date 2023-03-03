@@ -7,6 +7,7 @@ int main(int argc, char* argv[]) {
 
     float a=0, b=0, c=0;
     float x1, x2;
+    float re, im;
     float delta;
     printf("please input three numbers in order for equation \"ax^2+bx+c=0\"\n:");
     printf("a = ");
@@ -28,8 +29,7 @@ int main(int argc, char* argv[]) {
         printf("roots of \"%.3fx^2+%.3fx+%.3f = 0\"are belows:\n", a, b, c);
         printf("x1 = %.3f\nx2 = %.3f\n", x1, x2);
     }
-    else {
-        float re,im;
+    else {  
         re = -b/2;
         im = sqrt(-delta)/2;
         printf("roots of \"%.3fx^2+%.3fx+%.3f = 0\"are belows:\n", a, b, c);
