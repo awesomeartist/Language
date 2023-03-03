@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 
-typedef struct Node
-{
+typedef struct Node {
     int data;
     struct Node *next;
 }Node, *LinkList;
@@ -11,16 +10,16 @@ typedef struct Node
 LinkList LinkListCreate(void);
 void ShowLinkList(Node *L);
 
-int main(void)
-{
+int main(void){
+
     Node *L;
     L = LinkListCreate();
     ShowLinkList(L);
+
     return 0;
 }
 
-LinkList LinkListCreate(void)
-{
+LinkList LinkListCreate(void) {
     Node *L;
     L = (Node*)malloc(sizeof(Node));
     if(L==NULL)
@@ -31,8 +30,7 @@ LinkList LinkListCreate(void)
     L->next = NULL;
 
     int x;
-    while((scanf("%d", &x) != EOF) && (x!=-1))
-        {
+    while((scanf("%d", &x) != EOF) && (x!=-1)) {
             Node *p;
             p = (Node*)malloc(sizeof(Node));
             p->data = x;
@@ -42,8 +40,7 @@ LinkList LinkListCreate(void)
     return L;
 }
 
-void ShowLinkList(Node *L)
-{   
+void ShowLinkList(Node *L) {   
     if(L->next != NULL)
         {   
             Node *p;
