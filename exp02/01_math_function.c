@@ -3,7 +3,7 @@
 
 // 	计算一元二次方程ax^2+bx+c=0的实数解(键盘输入a, b, c)
 
-int main(int argc, char* argv[]){
+int main(int argc, char* argv[]) {
 
     float a=0, b=0, c=0;
     float x1, x2;
@@ -28,7 +28,7 @@ int main(int argc, char* argv[]){
         printf("roots of \"%.3fx^2+%.3fx+%.3f = 0\"are belows:\n", a, b, c);
         printf("x1 = %.3f\nx2 = %.3f\n", x1, x2);
     }
-    else{
+    else {
         float re,im;
         re = -b/2;
         im = sqrt(-delta)/2;
