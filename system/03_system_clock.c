@@ -12,12 +12,11 @@ int main(int argc, char *argv)
 #if 1
     start_t = clock();
 
-    for(int i=1;i<=count;i++){
+    for(int i=1;i<=count;i++) {
         sum+=i;
     }
     for(int i=0;i<count;i++)
-        for(int j=0;j<count;j++)
-        ;
+        for(int j=0;j<count;j++);
     end_t = clock();
 
 #elif 1

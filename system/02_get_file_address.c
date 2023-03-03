@@ -6,12 +6,10 @@ int main(){
     //打印输出当前路径
     char *buffer;
     //也可以将buffer作为输出参数
-    if((buffer = getcwd(NULL, 0)) == NULL)
-    {
+    if((buffer = getcwd(NULL, 0)) == NULL) {
         perror("getcwd error");
     }
-    else
-    {
+    else {
         printf("path:%s\n", buffer);
         free(buffer);
     }
