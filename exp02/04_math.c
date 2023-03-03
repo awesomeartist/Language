@@ -7,15 +7,18 @@ int main(void) {
     float rice, fish, flour;
     float rice_weight, fish_weight, flour_weight;
     float rice_discount, fish_discount, flour_discount, sum = 0;
+
     rice = 2.5;
     fish = 8;
     flour = 3.5;
     rice_discount = 0.9;
     fish_discount = 0.8;
     flour_discount = 0.7;
+
     printf("unit price of rice = %.3f, discount = %.3f\n", rice, rice_discount);
     printf("unit price of fish = %.3f, discount = %.3f\n", fish, fish_discount);
     printf("unit price of flour = %.3f, discount = %.3f\n", flour, flour_discount);
+    
     printf("please input the weight of fish:");
     scanf("%f", &rice_weight);
     printf("please input the weight of fish:");

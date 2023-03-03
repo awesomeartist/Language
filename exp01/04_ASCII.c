@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /*
-⒋	编写程序，用getchar读入两个字符给变量c1和c2，然后分别用putchar和printf函数显示这两个字符。
+编写程序，用getchar读入两个字符给变量c1和c2，然后分别用putchar和printf函数显示这两个字符。
 
 回答以下问题：
 1）变量c1和c2应定义为字符型还是整形变量，还是二者皆可？ 
@@ -16,8 +16,8 @@
 */
 
 
-int main(void)
-{
+int main(void) {
+
     // int c1,c2;
     char c1,c2;
 
