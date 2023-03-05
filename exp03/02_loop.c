@@ -4,7 +4,7 @@
 
 int main(void) {
 
-    int score =0;
+    int score = 0;
     int count = 0, sum = 0;
     while(1) {
         printf("please input a score:");
