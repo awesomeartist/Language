@@ -30,6 +30,7 @@ void Sort(int *array, int length) {
     int index;
     for (int i = 0; i<length; i++) {
         max = array[i];
+        index = i;
         for (int j = i; j<length; j++) {
             if(max<array[j]) {
                 max = array[j];
