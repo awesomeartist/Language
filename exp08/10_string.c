@@ -14,7 +14,7 @@ int main(void) {
     printf("str = %s\n", str);
     Str(str);
     printf("str = %s\n", str);
-
+    free(str);
 
     return 0;
 }

@@ -14,4 +14,6 @@ int main(void) {
         if (pow(a, 3)+pow(b, 3)+pow(c, 3) == count)
             printf("%d is the narcissistic number!\n", count);
     }
+    
+    return 0;
 }

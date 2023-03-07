@@ -9,10 +9,10 @@ int main(void) {
     int year = 2023;
     int last_year = year, next_year = year;
     int count = 0;
-    if (((year%400)>0 && (year%4 == 0)) || (year%400==0)) {
+    if (((year%400) > 0 && (year%4 == 0)) || (year%400 == 0)) {
         printf("year = %d, this year is leap year!\n", year);
         count+=1;
-        if (count ==3)
+        if (count == 3)
             return 0;
     }
     
@@ -20,18 +20,18 @@ loop:
     last_year = last_year-1;
     next_year = next_year+1;
 
-    if (((last_year%400)>0 && (last_year%4 == 0)) || (last_year%400==0)) {
+    if (((last_year%400) > 0 && (last_year%4 == 0)) || (last_year%400 == 0)) {
         printf("year = %d, this year is leap year!\n", last_year);
         count+=1;
     }
     if (count ==3)
         return 0;
     
-    if (((next_year%400)>0 && (next_year%4 == 0)) || (next_year%400==0)) {
+    if (((next_year%400) > 0 && (next_year%4 == 0)) || (next_year%400 == 0)) {
         printf("year = %d, this year is leap year!\n", next_year);
         count+=1;
     }
-     if (count ==3)
+     if (count == 3)
         return 0;
     else
         goto loop;
