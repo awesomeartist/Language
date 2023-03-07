@@ -13,8 +13,8 @@ int main(void) {
     return 0;
 }
 int GetYear(int year, int n) {
-    if (n>0)
-        return 2+GetYear(year, n-1);
+    if (n > 0)
+        return 2 + GetYear(year, n-1);
     else
         return year;
 }

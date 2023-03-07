@@ -6,7 +6,7 @@ int SumDivisor(int num);
 int main(void) {
 
     int sum1, sum2;
-    for (int i = 3; i<30000; i++) {
+    for (int i = 3; i < 30000; i++) {
             sum1 = SumDivisor(i);
             sum2 = SumDivisor(sum1);
         if (i == sum2 && sum1 > i)
@@ -19,7 +19,7 @@ int main(void) {
 int SumDivisor(int num) {
     int sum = 0;
     for(int count = 1; count < num; count++) {
-        if(num % count == 0) 
+        if(num%count == 0) 
             sum += count;
     }
     return sum;

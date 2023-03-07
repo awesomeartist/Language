@@ -18,13 +18,13 @@ int main(void) {
 }
 
 double Exp(double x, int n) {
-    if (n>0)
+    if (n > 0)
         return pow(x, n)/Factorial(n) + Exp(x, n-1);
     else
         return 1;
 }
 double Factorial(int n) {
-    if (n>0)
+    if (n > 0)
         return n*Factorial(n-1);
     else
         return 1;

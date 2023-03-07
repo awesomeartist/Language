@@ -26,10 +26,10 @@ int main(void) {
 
 int CommonMultiple(int num1, int num2) {
     int count = num1;
-    if (num1<num2)
+    if (num1 < num2)
         count = num2;
     while(1) {
-        if(count%num1==0 && count%num2==0)
+        if(count%num1 == 0 && count%num2 == 0)
             break;
         else
             count += 1;

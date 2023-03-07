@@ -7,7 +7,7 @@ int GetLocation(int* array, int len, int index);
 int main(void) {
 
     int len = 10, index = len-1, array[len];
-    for (int i = 0; i<len; i++) {
+    for (int i = 0; i < len; i++) {
         printf("please input a number:");
         scanf("%d", &array[i]);
     }
@@ -18,10 +18,10 @@ int main(void) {
 }
 
 int GetLocation(int* array, int len, int index) {
-    if (array[len-1]>array[index-1])
+    if (array[len-1] > array[index-1])
         index = len;
 
-    if(len>0)
+    if(len > 0)
         return GetLocation(array, len-1, index);
     else
         return index;

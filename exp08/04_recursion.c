@@ -15,9 +15,9 @@ int main(void) {
     return 0;
 }
 int NumToStr(int num) {
-    if (num!=0) {
+    if (num != 0) {
         NumToStr(num/10);
-        printf("%c", num%10+48);
+        printf("%c", num%10 + 48);
     }
     else
         return 0;
