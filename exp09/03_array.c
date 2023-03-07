@@ -28,10 +28,10 @@ int main(void) {
 void Sort(int *array, int length) {
     int max;
     int index;
-    for (int i = 0; i<length; i++) {
+    for (int i = 0; i < length; i++) {
         max = array[i];
         index = i;
-        for (int j = i; j<length; j++) {
+        for (int j = i; j < length; j++) {
             if(max<array[j]) {
                 max = array[j];
                 index = j;
@@ -43,7 +43,7 @@ void Sort(int *array, int length) {
 }
 
 void Output(int* array, int length) {
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }
 }

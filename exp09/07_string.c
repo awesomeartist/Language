@@ -23,13 +23,13 @@ void String_cat(char *str, char* str1, char* str2) {
     int count, index = 0;
 
     count = 0;
-    while (str1[count]!='\0') {
+    while (str1[count] != '\0') {
         str[index] = str1[count];
         count += 1;
         index += 1;
     }
     count = 0;
-    while (str2[count]!='\0') {
+    while (str2[count] != '\0') {
         str[index] = str2[count];
         count += 1;
         index += 1;

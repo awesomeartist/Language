@@ -11,7 +11,7 @@ int main(void) {
     int length = 10, m = 12;
     int array[length];
 
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
         printf("please input a number:");
         scanf("%d", &array[i]);
     }
@@ -27,9 +27,9 @@ int main(void) {
 //
 void Move(int *array, int length, int m) {
     int temp;
-    for (int i = m; i>0; i--) {
+    for (int i = m; i > 0; i--) {
         temp  = array[length-1];
-        for (int j = length-1; j>0; j--) {
+        for (int j = length-1; j > 0; j--) {
             array[j] = array[j-1];
         }
         array[0] = temp;
@@ -37,7 +37,7 @@ void Move(int *array, int length, int m) {
 }
 
 void Output(int* array, int length) {
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }
 }

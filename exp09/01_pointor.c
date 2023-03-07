@@ -20,15 +20,15 @@ int main(void) {
 
 void Sort(int* x, int* y, int* z) {
     int temp;
-    if (*x<*y)
+    if (*x < *y)
     temp = *x;
     *x = *y;
     *y = temp;
-    if (*y<*z)
+    if (*y < *z)
     temp = *y;
     *y = *z;
     *z = temp;
-    if (*x<*y)
+    if (*x < *y)
     temp = *x;
     *x = *y;
     *y = temp;

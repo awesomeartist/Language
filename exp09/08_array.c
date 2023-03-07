@@ -10,11 +10,11 @@ int main(void) {
     float sum, value[10] = {100, 50, 20, 10, 5, 1, 0.5, 0.1, 0.05, 0.01};
     printf("please input a number:");
     scanf("%f", &sum);
-    for (int i = 0; i<10; i++) {
+    for (int i = 0; i < 10; i++) {
         array[i] = (int)(sum/value[i]); 
         sum -= value[i]*array[i];
     }
-    for (int i = 0; i<10; i++) {
+    for (int i = 0; i < 10; i++) {
         printf("$%.2f = %d\n", value[i], array[i]);
     }
 

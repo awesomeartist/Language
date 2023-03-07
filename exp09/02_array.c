@@ -10,7 +10,7 @@ int main(void) {
     int length = 10;
     int array[length];
 
-    for (int i = 0; i<length; i++) {
+    for (int i = 0; i < length; i++) {
         printf("please input a number:");
         scanf("%d", &array[i]);
     }
@@ -26,7 +26,7 @@ int main(void) {
 
 void Reverse(int *array, int length) {
     int temp;
-    for (int i = 0; i<length/2; i++) {
+    for (int i = 0; i < length/2; i++) {
         temp = array[i];
         array[i] = array[length-i-1];
         array[length-i-1] = temp; 
@@ -34,7 +34,7 @@ void Reverse(int *array, int length) {
 }
 
 void Output(int* array, int length) {
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }
 }

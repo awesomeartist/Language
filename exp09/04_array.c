@@ -15,7 +15,7 @@ int main(void) {
     int length = 10;
     int array[length];
 
-    for (int i = 0; i<length; i++) {
+    for (int i = 0; i < length; i++) {
         printf("please input a number:");
         scanf("%d", &array[i]);
     }
@@ -34,8 +34,8 @@ void Sort(int *array, int length) {
     int index_max, index_min;
     max = array[0];
     min = array[0];
-    for (int i = 0; i<length; i++) {
-        if (max<array[i]) {
+    for (int i = 0; i < length; i++) {
+        if (max < array[i]) {
         max = array[i];
         index_max = i;
         }
@@ -51,7 +51,7 @@ void Sort(int *array, int length) {
 }
 
 void Output(int* array, int length) {
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }
 }

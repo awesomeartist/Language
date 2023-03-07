@@ -50,7 +50,7 @@ int main(void) {
 }
 
 void Output(int* array, int length) {
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             printf("%d  ", array[i]);
     }
 }
@@ -59,10 +59,10 @@ void Output(int* array, int length) {
 void Sort(int *array, int length) {
     int max;
     int index;
-    for (int i = 0; i<length; i++) {
+    for (int i = 0; i < length; i++) {
         max = array[i];
         index = i;
-        for (int j = i; j<length; j++) {
+        for (int j = i; j < length; j++) {
             if(max<array[j]) {
                 max = array[j];
                 index = j;
