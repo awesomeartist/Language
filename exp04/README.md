@@ -49,7 +49,7 @@ Sorry！，并结束程序。
 
 9. 用迭代法求 $ x = \sqrt a $ 。求平方根的迭代公式为：
 
-$$ x_{n+1} = \frac 1 2 \left ( x_n +\frac a {x_n}\right)$$<br>
+$$ x_{n+1} = \frac 1 2 \left ( x_n +\frac a {x_n}\right)$$  
 要求前后两次求出的x的差的绝对值小于10e-5
 
 10. 一个正整数有可能被表示为n(n\>=2)个连续正整数之和，如:   
