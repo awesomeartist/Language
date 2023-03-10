@@ -11,7 +11,7 @@ int main(void) {
         scanf("%lf", &x);
     } while (x < 0);
     next = x;
-    while (next-(next + x/next)/2 >= 10e-6) {
+    while (next-(next + x/next)/2 >= 1e-5) {
         next = (next + x/next)/2;
         epoch += 1;
     }
