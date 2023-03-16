@@ -4,9 +4,9 @@ import os
 photopath = "C:/Users/liang/Desktop/0"
 
 # 起始文件名编号
-num = 1
+num = 106
 # 文件名前缀
-name = 'L'
+name = 'M'
 filelist =  os.listdir(photopath)
 
 for f in filelist:
