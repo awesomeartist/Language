@@ -4,7 +4,7 @@ using namespace std;
 
 void myFunction(string fname, int age)
     {
-        cout <<"firstName: " << fname <<"  age:" <<age <<endl;
+        cout << "firstName: " << fname << "  age:" << age << endl;
     }
 int main(void)
 {

@@ -8,17 +8,17 @@ int main(void)
     string lastName = "Doe";
     string fullName = firstName + lastName;
 
-    cout <<"fullName : " <<fullName <<endl;
+    cout << "fullName : " << fullName << endl;
     
     fullName = firstName + " " + lastName;
-    cout <<"fullName : " <<fullName <<endl;
+    cout << "fullName : " << fullName << endl;
     
     fullName = firstName.append(lastName);
-    cout <<"fullName : " <<fullName <<endl;
+    cout << "fullName : " << fullName <<endl;
 
     string str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    cout <<"The length of the str string is : " <<str.length() <<endl;
-    cout <<"The length of the str string is : " <<str.size() <<endl;
+    cout << "The length of the str string is : " << str.length() << endl;
+    cout << "The length of the str string is : " << str.size() << endl;
     
     return 0;
 }

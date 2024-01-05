@@ -22,8 +22,8 @@ int main(void)
     Car carObj1("BMW", "XS", 1999);
     Car carObj2("Ford", "Mustang", 1969);
 
-    cout <<carObj1.brand <<" " <<carObj1.model <<" " <<carObj1.year <<endl;
-    cout <<carObj2.brand <<" " <<carObj2.model <<" " <<carObj2.year <<endl;
+    cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << endl;
+    cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << endl;
 
     return 0;
 }

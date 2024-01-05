@@ -6,8 +6,8 @@ int main(void)
 {
     int count = 10;
     
-    int i=count;
-    while(i>0)
+    int i = count;
+    while(i > 0)
         {    
             cout <<"count = " <<i <<endl;
             i--;
@@ -16,15 +16,15 @@ int main(void)
 
     i = count;
     do{   
-        cout <<"count = " <<i <<endl;
+        cout << "count = " << i << endl;
         i--;
 
-    }while(i>0);
+    }while(i > 0);
 
     i = count;
-    for(;i>0;i--)
+    for(; i>0; i--)
         {
-            cout <<"count = " <<i <<endl;
+            cout << "count = " << i << endl;
         }
 
     return 0;

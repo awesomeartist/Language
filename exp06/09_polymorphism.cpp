@@ -6,21 +6,21 @@ using namespace std;
 class Animal{
     public:
     void animalSound(){
-        cout <<"The animal make a sound.\n";
+        cout << "The animal make a sound.\n";
     }
 };
 
 class Pig : public Animal{
     public:
     void animalSound(){
-        cout <<"The pig says: wee wee ...\n";
+        cout << "The pig says: wee wee ...\n";
     }
 };
 
 class Dog : public Animal{
     public:
     void animalSound(){
-        cout <<"The dog says: wow wow ...\n";
+        cout << "The dog says: wow wow ...\n";
     }
 };
 

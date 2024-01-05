@@ -17,16 +17,16 @@ double plusFunction(double x, double y)
 
 int main(void)
 {   
-    int x = 5,y = 2;
-    double num1 = 1.2,num2 = 2.4;
+    int x = 5, y = 2;
+    double num1 = 1.2, num2 = 2.4;
 
-    cout <<"x = " <<x <<endl;
-    cout <<"y = " <<y <<endl;
-    cout <<"x+y = " <<plusFunction(x, y) <<endl;
+    cout << "x = " << x << endl;
+    cout << "y = " << y << endl;
+    cout << "x+y = " << plusFunction(x, y) << endl;
 
-    cout <<"num1 = " <<num1 <<endl;
-    cout <<"mum2 = " <<num2 <<endl;
-    cout <<"num1-num2 = " <<plusFunction(num1, num2) <<endl;
+    cout << "num1 = " << num1 <<endl;
+    cout << "mum2 = " << num2 <<endl;
+    cout << "num1-num2 = " << plusFunction(num1, num2) << endl;
 
     return 0;
 }

@@ -24,8 +24,8 @@ int main(void)
     myObj.setSalary(50000);
     myObj.bonus = 10000;
 
-    cout <<"Salary : " <<myObj.getSalary() <<endl;
-    cout <<"Bonus : " <<myObj.bonus <<endl;
+    cout << "Salary : " << myObj.getSalary() << endl;
+    cout << "Bonus : " << myObj.bonus << endl;
 
 
     return 0;

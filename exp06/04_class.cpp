@@ -18,7 +18,7 @@ int main(void)
     // 实例化一个 Car 类
     MyClass myObj;
     myObj.x = 25;
-    myObj.num = 50; //不允许访问
+    myObj.num = 50; // 不允许访问
     myObj.z = 30;
 
 

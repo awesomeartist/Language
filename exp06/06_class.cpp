@@ -22,7 +22,7 @@ int main(void)
     // 实例化一个类
     Car myCar;
     myCar.honk();
-    cout <<myCar.brand + " " + myCar.model <<endl;
+    cout << myCar.brand + " " + myCar.model << endl;
 
     return 0;
 }

@@ -15,7 +15,7 @@ class MyOtherClass {
         }
 };
 
-class MyChildClass:public MyClass,public MyOtherClass{
+class MyChildClass:public MyClass, public MyOtherClass{
 
 };
 int main(void)

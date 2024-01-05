@@ -21,7 +21,7 @@ int main(void)
     // 实例化一个类
     Employee myObj;
     myObj.setSalary(30000);
-    cout <<"my salary is:" <<myObj.getSalary() <<endl;
+    cout << "my salary is:" << myObj.getSalary() << endl;
 
 
     return 0;

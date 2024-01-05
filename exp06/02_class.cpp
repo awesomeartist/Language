@@ -17,7 +17,7 @@ int main(void)
 {
     // 实例化一个 Car 类
     Car myObj;
-    cout <<"maxSpeed:" <<myObj.speed(200) <<endl;
+    cout << "maxSpeed:" << myObj.speed(200) << endl;
     myObj.myMethod();
 
 

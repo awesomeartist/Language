@@ -4,7 +4,7 @@ using namespace std;
 
 void myFunction(string country = "Norway")
     {
-        cout <<"Country: " << country <<endl;
+        cout << "Country: " << country << endl;
     }
 int main(void)
 {
