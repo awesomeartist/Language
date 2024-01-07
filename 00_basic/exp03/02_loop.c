@@ -1,24 +1,17 @@
 #include <stdio.h>
 
-//	未知数量的学生参加考试，成绩（0~100内的整数）已知。计算这次考试的班级平均成绩。（输入不在0~100的数，则认为输入结束）
+// 用户输入n，求s=1+（1+2）+（1+2+3）+\...+（1+2+3+\...+n）的值。
 
 int main(void) {
-
-    int score = 0;
-    int count = 0, sum = 0;
-    while(1) {
-        printf("please input a score:");
-        scanf("%d", &score);
-        if (score>=0 && score<=100) {
-            count += 1;
-            sum += score;
-        }
-        else {
-            printf("invalid score!\n");
-            break;
+    int n, sum = 0;
+    printf("please input a number :");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for(int j = 1; j <= i; j++) {
+            sum += j;
         }
     }
-    printf("average score of %d students is:%.3f",count, (double)sum/count);
+    printf("1+(1+2)+(1+2+3)+...+(1+2+3+...+%d) = %d\n", n, sum);
 
     return 0;
 }

@@ -1,39 +1,40 @@
 #include <stdio.h>
 
-//	输入一个班（全班最多不超过 30 人）学生某门课的成绩，当输入成绩为负值时， 输入结束，分别统计下列内容： 
-//  a）统计不及格人数； 
-//  b）统计成绩在全班平均分及平均分之上的学生人数；
+// 一个正整数有可能被表示为n(n\>=2)个连续正整数之和，如：
+// 15=1+2+3+4+5
+// 15=4+5+6
+// 15=7+8
+// 请编写程序，根据输入的一个正整数，找出符合这种要求的所有连续正整数序列。例如，输入15，则输出：
+// 1 2 3 4 5
+// 4 5 6
+// 7 8
+// 若输入16，则输出：NONE
+
 
 int main(void) {
 
-    int score = 0;
-    int all_score[30];
-    int count = 0, sum = 0;
-    int count_failure = 0, count_over_average = 0;
+    int num, flag = 0;
+    do {
+        printf("please input a number no less than 0:");
+        scanf("%d", &num);
+    } while (num < 0);
 
-    while(count<30) {
-        printf("please input a score:");
-        scanf("%d", &score);
-        if (score>=0 && score<=100) {
-            all_score[count] = score;
-            count += 1;
-            sum += score;    
-            if (score<60)
-                count_failure += 1;
-        }
-        else {
-            printf("invalid score!\n");
-            break;
+    for (int i = 1; i < num; i++) {
+        int sum = 0;
+        for (int j = i; j < num; j++) {
+            sum += j;
+            if (sum > num) 
+                break;
+            if (sum == num) {
+                flag = 1;
+                for (int k = i; k <= j; k++)
+                    printf("%d ", k);
+                printf("\n");
+            }
         }
     }
-    
-    for (int i = count; i>=0; i--) {
-        if (all_score[i-1]>=(double)sum/count)
-            count_over_average +=1;
-    }
-    printf("the number of failing student is: %d\n", count_failure);
-    printf("the average score of %d students is: %.3f\n", count, (double)sum/count);
-    printf("the number of student who exceed the average score is: %d\n", count_over_average);
 
+    if (flag == 0)
+        printf("NONE!");
     return 0;
 }

@@ -1,22 +1,23 @@
 #include <stdio.h>
 
-// 输入10个小数，统计出正数之和和负数之和
+// 请编写双层循环结构程序，输出如下图形。
+//       * * *
+//     * * * * *
+//   * * * * * * *
+// * * * * * * * * *
 
 int main(void) {
+    int n;
+    printf("please input a number :");
+    scanf("%d", &n);
 
-    float num;
-    float  sum1 =0, sum2 = 0;
-    
-    for (int count =10;count>0;count--) {
-        printf("please input a number:");
-        scanf("%f", &num);
-        if (num>=0)
-            sum1+=num;
-        else
-            sum2+=num;
+    for (int i = 0; i < n; i++) {
+        for (int j = n-i; j > 0; j-- )
+            printf("  ");
+        for (int j = 1; j <= 3+2*i; j++)
+                printf(" *");
+        printf("\n");
     }
-    printf("the sum of those no less than 0 is %f\n", sum1);
-    printf("the sum of those less than 0 is %f\n", sum2);
 
     return 0;
 }

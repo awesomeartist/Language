@@ -1,22 +1,21 @@
 #include <stdio.h>
 
-// 计算1~1000以内所有的完数（用函数）
-
-void IsPerfectNumber(int number) {
-    int sum = 0;
-    for (int count = 1; count<number; count++) {
-        if (number%count == 0)
-            sum += count;
-    }
-    if (sum == number)
-        printf("%d is a perfect number!\n", number);
-}
+// 迭代法开根号 sqrt(a) = x_n+1, x_n+1 = 1/2（x_n + a/x_n)
 
 int main(void) {
 
-    for (int count = 2; count<1000; count++) {
-        IsPerfectNumber(count);
+    double x, next;
+    int epoch = 0;
+    do {
+        printf("please input a number:");
+        scanf("%lf", &x);
+    } while (x < 0);
+    next = x;
+    while (next-(next + x/next)/2 >= 1e-5) {
+        next = (next + x/next)/2;
+        epoch += 1;
     }
+    printf("epoch = %d, sqrt(%.2f) = %.3f\n ", epoch, x, next);
 
     return 0;
 }
