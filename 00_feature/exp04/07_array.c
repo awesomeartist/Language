@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-#define MAX_LEN 16
+#define ARR_LEN 16
 
 int main()
 {
-    char str1[MAX_LEN], str2[MAX_LEN], str3[2*MAX_LEN];
+    char str1[ARR_LEN], str2[ARR_LEN], str3[2*ARR_LEN];
     gets(str1);
     gets(str2);
     printf("str1 = %s\n", str1);

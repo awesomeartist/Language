@@ -1,15 +1,15 @@
 #include <stdio.h>
 
-#define MAX_LEN 64
+#define ARR_LEN 64
 
 int main()
 {
-    char str[MAX_LEN];
+    char str[ARR_LEN];
     char count = 0, index = 0, word_flag = 0;
     gets(str);
     printf("input str = %s\n", str);
 
-    while (str[index] != 0 && index < MAX_LEN) {
+    while (str[index] != 0 && index < ARR_LEN) {
         if (str[index] == ' ') {
             word_flag = 0;
         }

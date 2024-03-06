@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-#define MAX_LEN 64
+#define ARR_LEN 64
 
 int main()
 {
-    char str[MAX_LEN];
+    char str[ARR_LEN];
     char index = 0, count = 0;
 
     gets(str);
     printf("input string = %s\n", str);
     
-    while (str[index] != 0 && index < MAX_LEN) {
+    while (str[index] != 0 && index < ARR_LEN) {
         if ((str[index] <= '9' && str[index] >= '0') ||
             (str[index] <= 'z' && str[index] >= 'a') ||
             (str[index] <= 'Z' && str[index] >= 'A')) {

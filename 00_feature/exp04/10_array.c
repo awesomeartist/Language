@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-#define MAX_LEN 16
+#define ARR_LEN 16
 
 int main()
 {
-    char numbers[MAX_LEN];
-    char count[MAX_LEN] = {0};
-    char flag = 0, index = 0, array_len = MAX_LEN;
+    char numbers[ARR_LEN];
+    char count[ARR_LEN] = {0};
+    char flag = 0, index = 0, array_len = ARR_LEN;
 
-    for (char i = 0; i < MAX_LEN; i++) {
+    for (char i = 0; i < ARR_LEN; i++) {
         scanf("%d", numbers+i);
         for (char j = 0; j < i; j++) {
             if (numbers[i] == numbers[j]) {
