@@ -12,17 +12,17 @@ int main()
     printf("please input a sudo\n");
     for (char i = 0; i < N*N; i++) {
         do {
-            printf("mat[%d][%d] = ", i/N, i%N);
+            printf("mat[%d][%d] = ", i/N+1, i%N+1);
             scanf("%d", mat[0]+i);
             if (mat[i/N][i%N] < 1 || mat[i/N][i%N] > N) {
                 printf("invalid input! please try again.\n");
             }
-        } while (mat[i/N][i%N] < 1 || mat[i/N][i%N] > N);
+        } while(mat[i/N][i%N] < 1 || mat[i/N][i%N] > N);
     }
 
     printf("mat[] = \n");
-    for (char i = 0; i < N; i++) {
-        for (char j = 0; j < N; j++)
+    for (char i = 1; i < N+1; i++) {
+        for (char j = 1; j < N+1; j++)
             printf("%d  ", mat[i][j]);
         printf("\n");
     }

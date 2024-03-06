@@ -27,7 +27,7 @@ int main()
                 scanf("%d", score+total_cnt);
                 if ((*(score+total_cnt) < 80) || (*(score+total_cnt) > 100))
                     printf("invalid input! please try again!\n");
-            } while ((*(score+total_cnt) < 80) || (*(score+total_cnt) > 100));
+            } while((*(score+total_cnt) < 80) || (*(score+total_cnt) > 100));
             score_sum += *(score+total_cnt);
         }
         sort_bubble(score, total_cnt);

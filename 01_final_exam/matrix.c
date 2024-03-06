@@ -1,8 +1,8 @@
 /* 
  * filename:matrix.c
- * coding:GBK 
+ * coding:UTF-8 
  * author:yan
- * function:ÖÕ¶ËÃüÁîĞĞÊäÈëÊä³öÊµÏÖ·½Õó»ù±¾ÔËËã
+ * function:ç»ˆç«¯å‘½ä»¤è¡Œè¾“å…¥è¾“å‡ºå®ç°æ–¹é˜µåŸºæœ¬è¿ç®—
  */
 
 // #include "stdafx.h"
@@ -103,7 +103,7 @@ void p1(char b[],int p,int x,int y,int h)
 		}putchar('\n');
 	}goto right;
 error:;
-	printf("ÊıÖµÊäÈëÓĞÎó\n");an[n][0]=0;
+	printf("æ•°å€¼è¾“å…¥æœ‰è¯¯\n");an[n][0]=0;
 right:;
 }
 
@@ -183,9 +183,9 @@ void p2(char b[],int p,int n){
 		   printf("det=%.2f\n",det);goto endline;
 	}}
 	switch(mode){
-	case 0:an[n][0]=0;printf("ÎŞ·¨Ê¶±ğµÄ¸ñÊ½\n");break;
+	case 0:an[n][0]=0;printf("æ— æ³•è¯†åˆ«çš„æ ¼å¼\n");break;
 	case 2:for(x=-1;++x<xy[n]/10;){for(y=-1;++y<xy[n]%10;) printf("%-5.2f  ",a[n][x][y]);putchar('\n');}break;
-	case 4:printf("¾ØÕóÀàĞÍ²»Æ¥Åä\n");break;
+	case 4:printf("çŸ©é˜µç±»å‹ä¸åŒ¹é…\n");break;
 	}
 	endline:;
 }
@@ -220,7 +220,7 @@ void anl1(char b[],int p)
 	if(!mode) an[n][0]=0;
 	else xy[n]=10*x+y;
 	switch(mode){
-	case 0:printf("ÎŞ·¨Ê¶±ğµÄ¸ñÊ½\n");break;
+	case 0:printf("æ— æ³•è¯†åˆ«çš„æ ¼å¼\n");break;
 	case 1:p1(b,p,x,y,n);break;
 	case 2:p2(b,p,n);break;
 	}
@@ -238,25 +238,25 @@ void anl(char b[])
 		if(b[i]==' '){mode=0;break;}
 	}if(mode==3)mode=2;
 	switch(mode){
-	case 0:printf("ÎŞ·¨Ê¶±ğµÄ¸ñÊ½\n");break;
+	case 0:printf("æ— æ³•è¯†åˆ«çš„æ ¼å¼\n");break;
 	case 1:anl1(b,p);break;
 	case 2:p2(b,-1,10);break;
 	}
 }
 
 void pt(){
-	printf("ÒÔÏÂÎªÄ¿Â¼\n");
+	printf("ä»¥ä¸‹ä¸ºç›®å½•\n");
 	printf("**********************\n");
-	printf("a(x,y)=n1,n2,n3,n4,n5  >>>>>  ÊäÈë¸³Öµ\n");
-	printf("b=a  >>>>>  ¼ÆËã¸³Öµ\n");
-	printf("a!   >>>>>  ÇóÄæ\n");
-	printf("a&   >>>>>  ÇóÖµ\n");
-	printf("a?   >>>>>  ×ªÖÃ\n");
-	printf("a*3  >>>>>  Êı³Ë\n");
-	printf("a*b  >>>>>  ¾ØÕó³Ë·¨\n");
-	printf("a    >>>>>  ÏÔÊ¾\n");
-	printf("exit >>>>>  ÍË³ö\n");
-	printf("Çë¿ªÊ¼ÄãµÄ±íÑİ\n");
+	printf("a(x,y)=n1,n2,n3,n4,n5  >>>>>  è¾“å…¥èµ‹å€¼\n");
+	printf("b=a  >>>>>  è®¡ç®—èµ‹å€¼\n");
+	printf("a!   >>>>>  æ±‚é€†\n");
+	printf("a&   >>>>>  æ±‚å€¼\n");
+	printf("a?   >>>>>  è½¬ç½®\n");
+	printf("a*3  >>>>>  æ•°ä¹˜\n");
+	printf("a*b  >>>>>  çŸ©é˜µä¹˜æ³•\n");
+	printf("a    >>>>>  æ˜¾ç¤º\n");
+	printf("exit >>>>>  é€€å‡º\n");
+	printf("è¯·å¼€å§‹ä½ çš„è¡¨æ¼”\n");
 	printf("**********************\n");
 }
 
