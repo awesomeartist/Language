@@ -67,6 +67,10 @@ int main()
     printf("mat_t[] = \n");
     matrix_show(mat_t, col, row);
 
+    for(char i = 0; i < row; i++)
+        free(mat[i]);
+    for(char i = 0; i < col; i++)
+        free(mat_t[i]);
     free(mat);
     free(mat_t);
 
