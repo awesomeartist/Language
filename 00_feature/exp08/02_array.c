@@ -2,8 +2,8 @@
 
 // 输入一个整型数组，将其倒序并输出，要求使用指针，编写函数实现数组倒序，并写主函数验证。
 
-void Reverse(int* array, int length);
-void Output(int* array, int length);
+void array_reverse(int* array, int length);
+void array_output(int* array, int length);
 
 int main(void) {
 
@@ -16,15 +16,15 @@ int main(void) {
     }
 
     printf("before reverse :\n");
-    Output(array, length);
-    Reverse(array, length);
+    array_output(array, length);
+    array_reverse(array, length);
     printf("after reverse :\n");
-    Output(array, length);
+    array_output(array, length);
     
     return 0;
 }
 
-void Reverse(int *array, int length) {
+void array_reverse(int *array, int length) {
     int temp;
     for (int i = 0; i < length/2; i++) {
         temp = array[i];
@@ -33,7 +33,7 @@ void Reverse(int *array, int length) {
     }
 }
 
-void Output(int* array, int length) {
+void array_output(int* array, int length) {
         for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }

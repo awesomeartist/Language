@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void Sort(int* array, int length);
-void Output(int* array, int length);
+void sort_selection(int* array, int length);
+void array_output(int* array, int length);
 
 // 输入一个整型数组，将其排序，要求使用指针，编写函数实现选择排序，并写主函数验证。
 
@@ -15,17 +15,17 @@ int main(void) {
         scanf("%d", &array[i]);
     }
 
-    printf("before Sorting :\n");
-    Output(array, length);
-    Sort(array, length);
-    printf("after Sorting :\n");
-    Output(array, length);
+    printf("before sort_selectioning :\n");
+    array_output(array, length);
+    sort_selection(array, length);
+    printf("after sort_selectioning :\n");
+    array_output(array, length);
     
 
     return 0;
 }
 // selection sort
-void Sort(int *array, int length) {
+void sort_selection(int *array, int length) {
     int max;
     int index;
     for (int i = 0; i < length; i++) {
@@ -42,7 +42,7 @@ void Sort(int *array, int length) {
     }
 }
 
-void Output(int* array, int length) {
+void array_output(int* array, int length) {
         for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }

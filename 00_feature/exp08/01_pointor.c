@@ -2,7 +2,7 @@
 
 // 编写函数将三个整数从大到小排序（使用指针做参数），并写主函数验证。
 
-void Sort(int* x, int* y, int* z);
+void sort_pointer(int* x, int* y, int* z);
 
 int main(void) {
 
@@ -10,7 +10,7 @@ int main(void) {
     
     printf("before:");
     printf("x = %d, y = %d, z = %d\n", x, y, z);
-    Sort(&x, &y, &z);
+    sort_pointer(&x, &y, &z);
     printf("after:");
     printf("x = %d, y = %d, z = %d\n", x, y, z);
 
@@ -18,7 +18,7 @@ int main(void) {
     return 0;
 }
 
-void Sort(int* x, int* y, int* z) {
+void sort_pointer(int* x, int* y, int* z) {
     int temp;
     if (*x < *y)
     temp = *x;

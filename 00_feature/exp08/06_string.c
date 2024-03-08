@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int Get_string_length(char* str);
+int string_length_get(char* str);
 
 // 写函数求字符串长度，要求使用指针，并写主函数验证。
 
@@ -19,14 +19,14 @@ int main(void) {
     // }
     // str[i-1]='\0';
     printf("str = %s\n", str);
-    count = Get_string_length(str);
+    count = string_length_get(str);
     printf("str length = %d\n", count);
 
 
     return 0;
 }
 
-int Get_string_length(char* str) {
+int string_length_get(char* str) {
     int count = 0;
     while (str[count]!='\0') { // 0 = '\0', '0' = 48
         count += 1;

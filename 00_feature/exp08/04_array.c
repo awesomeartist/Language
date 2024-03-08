@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void Sort(int* array, int length);
-void Output(int* array, int length);
+void array_extreme_value(int* array, int length);
+void array_output(int* array, int length);
 
 // 输入10个整数，将其中最小的数与第一个数对换，把最大的数与最后一个数对换。
 // 写三个函数：
@@ -20,16 +20,16 @@ int main(void) {
         scanf("%d", &array[i]);
     }
 
-    printf("before Sorting :\n");
-    Output(array, length);
-    Sort(array, length);
-    printf("after Sorting :\n");
-    Output(array, length);
+    printf("before array_extreme_valueing :\n");
+    array_output(array, length);
+    array_extreme_value(array, length);
+    printf("after array_extreme_valueing :\n");
+    array_output(array, length);
     
     return 0;
 }
 // 
-void Sort(int *array, int length) {
+void array_extreme_value(int *array, int length) {
     int max, min;
     int index_max, index_min;
     max = array[0];
@@ -50,7 +50,7 @@ void Sort(int *array, int length) {
     array[0] = min;
 }
 
-void Output(int* array, int length) {
+void array_output(int* array, int length) {
         for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }

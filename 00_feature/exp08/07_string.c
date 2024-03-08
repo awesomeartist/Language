@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void String_cat(char *str, char* str1, char* str2);
+void strcat_myfun(char *str, char* str1, char* str2);
 // 写函数将两个字符串连接，要求使用指针，并写主函数验证。
 
 int main(void) {
@@ -11,7 +11,7 @@ int main(void) {
     gets(str1);
     printf("please input a string not more than 31 characters:");
     gets(str2);
-    String_cat(str, str1, str2);
+    strcat_myfun(str, str1, str2);
     printf("str1 = %s\n", str1);
     printf("str2 = %s\n", str2);
     printf("str1 + str2 = %s\n", str);
@@ -19,7 +19,7 @@ int main(void) {
     return 0;
 }
 
-void String_cat(char *str, char* str1, char* str2) {
+void strcat_myfun(char *str, char* str1, char* str2) {
     int count, index = 0;
 
     count = 0;

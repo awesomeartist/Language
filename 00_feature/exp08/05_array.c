@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void Move(int* array, int length, int m);
-void Output(int* array, int length);
+void array_shift(int* array, int length, int m);
+void array_output(int* array, int length);
 
 // 有n个整数，使前面各数顺序向后移m个位置，最后m个数变成最前面m个数
 // 写一函数实现以上功能，在主函数中输入n个整数和输出调整后的n个数,要求使用指针，并写主函数验证。
@@ -17,15 +17,15 @@ int main(void) {
     }
 
     printf("before shifting :\n");
-    Output(array, length);
-    Move(array, length, m);
+    array_output(array, length);
+    array_shift(array, length, m);
     printf("after shifting back %d places:\n", m);
-    Output(array, length);
+    array_output(array, length);
     
     return 0;
 }
 //
-void Move(int *array, int length, int m) {
+void array_shift(int *array, int length, int m) {
     int temp;
     for (int i = m; i > 0; i--) {
         temp  = array[length-1];
@@ -36,7 +36,7 @@ void Move(int *array, int length, int m) {
     }
 }
 
-void Output(int* array, int length) {
+void array_output(int* array, int length) {
         for (int i = 0; i < length; i++) {
             printf("array[%d] = %d\n", i, array[i]);
     }
