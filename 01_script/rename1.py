@@ -14,13 +14,14 @@ def rename1(path_dir, pre, start_num = 1):
         if os.path.isdir(path_src):
             break
         strnum = str(num)
-        newname  = pre + strnum.zfill(3) + '.jpg'
+        newname  = pre + strnum.zfill(3) + '.' + f.split('.')[-1]
+        print(newname)
         path_dst = os.path.join(path_dir, newname)
         os.rename(path_src, path_dst)
         num += 1
 
 if __name__ == "__main__":
-    root_dir = 'D:\\MySpace\\Collection\\MyPhoto\\look'
+    root_dir = 'E:\\MediaSpace\\zPrivate\\album'
 
     # rename1(root_dir, 'AX_')
     
