@@ -21,7 +21,8 @@ int main()
 
 
     // 1) basic_string
-    print("1) basic_string");
+#if false
+
     string str_res_1 = str_ref;
     string str_res_2(str_ref);
     print("str_ref", (string)str_ref);
@@ -31,6 +32,7 @@ int main()
     fun1(str_ref);
     print("the address of str_res_1", (uintptr_t)str_res_1.data());
     print("the address of str_res_2", (uintptr_t)str_res_2.data());
+
     // output:
     // 1) basic_string
     // str_ref = "你好，世界！"
@@ -41,59 +43,69 @@ int main()
     // the address of str_res_1 = 2974756987408
     // the address of str_res_2 = 2974756987440
 
+#endif
 
-    // 2) string_view
-    print("2) string_view");
-    string_view str_res_3 = str_ref;
-    string_view str_res_4(str_ref);
+#if true
+
+    string_view str_res_1 = str_ref;
+    string_view str_res_2(str_ref);
     print("str_ref", (string)str_ref);
-    print("str_res_3", str_res_3);
-    print("str_res_4", str_res_4);
+    print("str_res_1", str_res_1);
+    print("str_res_2", str_res_2);
     print("the address of str_ref", (uintptr_t)str_ref);
     fun2(str_ref);
-    print("the address of str_res_3", (uintptr_t)str_res_3.data());
-    print("the address of str_res_4", (uintptr_t)str_res_4.data());
+    print("the address of str_res_1", (uintptr_t)str_res_1.data());
+    print("the address of str_res_2", (uintptr_t)str_res_2.data());
+
     // output:
-    // 2) string_view
     // str_ref = "你好，世界！"
-    // str_res_3 = "你好，世界！"
-    // str_res_4 = "你好，世界！"
+    // str_res_1 = "你好，世界！"
+    // str_res_2 = "你好，世界！"
     // the address of str_ref = 140702284410945
     // str.data() in fun2 = 140702284410945
-    // the address of str_res_3 = 140702284410945
-    // the address of str_res_4 = 140702284410945
+    // the address of str_res_1 = 140702284410945
+    // the address of str_res_2 = 140702284410945
+
+#endif
 
 
     // 3) constexpr void remove_prefix(size_type n)
-    print("3) remove_prefix(size_type n)");
-    string_view str_res_5(str_ref);
-    str_res_5.remove_prefix(3);
+#if false
+
+    string_view str_res(str_ref);
+    str_res.remove_prefix(3);
     print("str_ref", (string)str_ref);
-    print("str_res_5", str_res_5);
+    print("str_res", str_res);
     print("the address of str_ref", (uintptr_t)str_ref);
-    print("the address of str_res_5", (uintptr_t)str_res_5.data());
+    print("the address of str_res", (uintptr_t)str_res.data());
+
     // output:
-    // 3) remove_prefix(size_type n)
     // str_ref = "你好，世界！"
-    // str_res_5 = "好，世界！"
+    // str_res = "好，世界！"
     // the address of str_ref = 140702284410945
-    // the address of str_res_5 = 140702284410948
+    // the address of str_res = 140702284410948
+
+#endif
 
 
     // 4) constexpr void remove_suffix(size_type n)
-    print("4) remove_suffix(size_type n)");
-    string_view str_res_6(str_ref);
-    str_res_6.remove_suffix(str_res_6.size()-9);
-    print("str_ref", (string)str_ref);
-    print("str_res_6", str_res_6);
-    print("the address of str_ref", (uintptr_t)str_ref);
-    print("the address of str_res_6", (uintptr_t)str_res_6.data());
-    // output:
-    // 4) remove_suffix(size_type n)
-    // str_ref = "你好，世界！"
-    // str_res_6 = "你好，"
-    // the address of str_ref = 140702284410945
-    // the address of str_res_6 = 140702284410945
+#if false
     
+    string_view str_res(str_ref);
+    str_res.remove_suffix(str_res.size()-9);
+    print("str_ref", (string)str_ref);
+    print("str_res", str_res_6);
+    print("the address of str_ref", (uintptr_t)str_ref);
+    print("the address of str_res", (uintptr_t)str_res.data());
+
+    // output:
+    // str_ref = "你好，世界！"
+    // str_res = "你好，"
+    // the address of str_ref = 140702284410945
+    // the address of str_res = 140702284410945
+    
+#endif
+
+
     return 0;
 }

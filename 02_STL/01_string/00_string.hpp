@@ -2,6 +2,7 @@
 
 
 void print(std::string name);
+void print(const char* name, const char *str);
 void print(std::string name, std::string str);
 void print(std::string name, std::string_view str);
 void print(std::string name, char ch);

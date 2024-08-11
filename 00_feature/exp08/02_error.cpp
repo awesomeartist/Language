@@ -4,20 +4,16 @@ using namespace std;
 
 int main(void)
 {
-    try
-    {
+    try {
         int age = 15;
-        if(age >= 18)
-            {
+        if (age >= 18) {
                 cout <<"Access grand - you are old enough.\n";
             }
-        else
-            {
+        else {
                 throw 404;
             }
     }
-    catch(...)
-    {
+    catch (...) {
         cout <<"Access denied - you must be at least 18 years old.\n";
     }
     return 0;
