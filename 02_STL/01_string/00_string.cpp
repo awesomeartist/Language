@@ -5,55 +5,64 @@
 
 using namespace std;
 
-void print(string name) {
+void print(string name) 
+{
     cout << "Call my function print overload 01" << endl;
     cout << name << endl;
 }
 
-void print(const char* name, const char *str) {
+void print(const char* name, const char *str) 
+{
     cout << name << " = " << quoted(str) << endl;
 }
 
-void print(string name, string str) {
+void print(string name, string str) 
+{
     cout << name << " = " << quoted(str) << endl;
 }
 
-void print(string name, string_view str) {
-    cout << "Call my function print overload 04" << endl;
+void print(string name, string_view str) 
+{
     cout << name << " = " << quoted(str) << endl;
 }
 
-void print(string name, char ch) {
+void print(string name, char ch) 
+{
     cout << name << " = " << '\'' << ch << '\'' << endl;
 }
 
-void print(string name, bool flag) {
+void print(string name, bool flag) 
+{
     cout << boolalpha;
     cout << name << " = " << flag << endl;
 }
 
-void print(string name, size_t count) {
+void print(string name, size_t count) 
+{
     cout << name << " = " << count << endl;
 }
 
-void print(string name, int num) {
+void print(string name, int num) 
+{
     cout << name << " = " << num << endl;
 }
 
-void print(string name, float num) {
-    cout << "Call my function print overload 09" << endl;
+void print(string name, float num) 
+{
     cout << name << " = " << num << endl;
 }
 
-void print(string name, string::iterator it) {
-    cout << "Call my function print overload 10" << endl;
+void print(string name, string::iterator it) 
+{
     cout << name << " = " << *it << endl;
 }
 
-void print(string::iterator it) {
+void print(string::iterator it) 
+{
     cout << *it << " ";
 }
 
-void print(string::reverse_iterator it) {
+void print(string::reverse_iterator it) 
+{
     cout << *it << " ";
 }
