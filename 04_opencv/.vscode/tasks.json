@@ -3,7 +3,7 @@
         {
             "type": "cppbuild",
             "label": "build",
-            "command": "g++.exe",
+            "command": "g++",
             "args": [
                 "-g",
                 "${file}",
