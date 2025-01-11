@@ -8,10 +8,10 @@ using namespace cv;
 
 int main()
 {
-	string abspath = "D:/WorkSpace/MyWork/Space_for_Code/CPP/Basic/04_opencv/resources/opencv_logo.jpg";
-	string path = "../resources/opencv_logo.jpg";
+	string absolute_path = "D:/WorkSpace/MyWork/Space_for_Code/CPP/Basic/04_opencv/resources/opencv_logo.jpg";
+	string path = "opencv_logo.jpg";
 
-	Mat img = imread(abspath);
+	Mat img = imread(absolute_path);
 	if (img.empty())
 	{
 		cout << "image is empty or the path is invalid!" << endl;
